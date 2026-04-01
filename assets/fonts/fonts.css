@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  src: url(./Inter/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: "FiraCode";
+  font-weight: 400;
+  font-style: normal;
+  src: url(./FiraCode/FiraCode-Regular.ttf);
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Potintiometer මගින් එහි දෙපස අග්‍ර දෙකට විභව බෙදීම විචලනය කළ හැකිය. මේ නිසා එහි මධ්‍ය අග්‍රයෙහි විභව අගය කියවීමෙන් 0 සිට 1023 දක්වා වෙනස් වන අගයක් ලබා ගත හැකිය. එම අගය මෙම කේතයේ 4න් බෙදා ඇත්තේ උපරිම මිලිතත්පර 256 ක Blink Delay එකක් ලබා ගැනීමටයි.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="LEDයක් වේගය වෙනස් කරමින් Blink කිරීම">
+  <meta property="og:description" content="Potintiometer මගින් එහි දෙපස අග්‍ර දෙකට විභව බෙදීම විචලනය කළ හැකිය. මේ නිසා එහි මධ්‍ය අග්‍රයෙහි විභව අගය කියවීමෙන් 0 සිට 1023 දක්වා වෙනස් වන අගයක් ලබා ගත හැකිය. එම අගය මෙම කේතයේ 4න් බෙදා ඇත්තේ උපරිම මිලිතත්පර 256 ක Blink Delay එකක් ලබා ගැනීමටයි.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LEDයක් වේගය වෙනස් කරමින් Blink කිරීම">
+  <meta name="twitter:description" content="Potintiometer මගින් එහි දෙපස අග්‍ර දෙකට විභව බෙදීම විචලනය කළ හැකිය. මේ නිසා එහි මධ්‍ය අග්‍රයෙහි විභව අගය කියවීමෙන් 0 සිට 1023 දක්වා වෙනස් වන අගයක් ලබා ගත හැකිය. එම අගය මෙම කේතයේ 4න් බෙදා ඇත්තේ උපරිම මිලිතත්පර 256 ක Blink Delay එකක් ලබා ගැනීමටයි.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>LEDයක් වේගය වෙනස් කරමින් Blink කිරීම</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">LEDයක් වේගය වෙනස් කරමින් Blink කිරීම</li>
+        </ol>
+      </nav>
+      <h1>
+        LEDයක් වේගය වෙනස් කරමින් Blink කිරීම
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      Potintiometer මගින් එහි දෙපස අග්‍ර දෙකට විභව බෙදීම විචලනය කළ හැකිය. මේ නිසා එහි මධ්‍ය අග්‍රයෙහි විභව අගය කියවීමෙන් 0 සිට 1023 දක්වා වෙනස් වන අගයක් ලබා ගත හැකිය. එම අගය මෙම කේතයේ 4න් බෙදා ඇත්තේ උපරිම මිලිතත්පර 256 ක Blink Delay එකක් ලබා ගැනීමටයි. පරිපථය පහත පරිදි සකස් කළ පසු Potintiometer හි වයිපරය කැරකැවීමෙන් LDEය Blink වන වේගය වෙනස් කර ගත හැකිය. මෙහි Resistor එකක් යොදා ඇත්තේ LEDයේ ආරක්ෂාව සඳහායි.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x 10K Ω POTENTIOMETER
+        <br>
+        1 x 100 Ω RESISTOR
+        <br>
+        1 x LED
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        LED(T+) = RES(T1)
+        <br>
+        RES(T2) = PIN(13)
+        <br>
+        POT(T1) = 5V
+        <br>
+        POT(WP) = PIN(A0)
+        <br>
+        LED(T-) = GND
+        <br>
+        POT(T2) = GND
+      </dd>
+    </dl>
+    <pre lang="cpp">
+int blinkSpeed = 0;
+
+void setup() {
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  blinkSpeed = analogRead(A0) / 4;
+  digitalWrite(13, HIGH);
+  delay(blinkSpeed);
+  digitalWrite(13, LOW);
+  delay(blinkSpeed);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

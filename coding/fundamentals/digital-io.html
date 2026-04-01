@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="අංකිත (Digital) ආදානයක් හෝ ප්‍රතිදානයක් සාමාන්‍ය පරිදි 1 හෝ 0 ආකාරයේ වේ. එනම් විදුලිය තිබීම හෝ නොතිබීමයි. UNO පුවරුවේ ඇති Pins 13 හි විභවය අඩු හෝ වැඩි කිරීමට මෙහි එන කේත කොටස් භාවිතා වේ.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="DIGITAL I/O (අංකිත ආදාන/ප්‍රතිදාන)">
+  <meta property="og:description" content="අංකිත (Digital) ආදානයක් හෝ ප්‍රතිදානයක් සාමාන්‍ය පරිදි 1 හෝ 0 ආකාරයේ වේ. එනම් විදුලිය තිබීම හෝ නොතිබීමයි. UNO පුවරුවේ ඇති Pins 13 හි විභවය අඩු හෝ වැඩි කිරීමට මෙහි එන කේත කොටස් භාවිතා වේ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DIGITAL I/O (අංකිත ආදාන/ප්‍රතිදාන)">
+  <meta name="twitter:description" content="අංකිත (Digital) ආදානයක් හෝ ප්‍රතිදානයක් සාමාන්‍ය පරිදි 1 හෝ 0 ආකාරයේ වේ. එනම් විදුලිය තිබීම හෝ නොතිබීමයි. UNO පුවරුවේ ඇති Pins 13 හි විභවය අඩු හෝ වැඩි කිරීමට මෙහි එන කේත කොටස් භාවිතා වේ.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>DIGITAL I/O (අංකිත ආදාන/ප්‍රතිදාන)</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">DIGITAL I/O (අංකිත ආදාන/ප්‍රතිදාන)</li>
+        </ol>
+      </nav>
+      <h1>
+        DIGITAL I/O (අංකිත ආදාන/ප්‍රතිදාන)
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      අංකිත (Digital) ආදානයක් හෝ ප්‍රතිදානයක් සාමාන්‍ය පරිදි 1 හෝ 0 ආකාරයේ වේ. එනම් විදුලිය තිබීම හෝ නොතිබීමයි. UNO පුවරුවේ ඇති Pins 13 හි විභවය අඩු හෝ වැඩි කිරීමට මෙහි එන කේත කොටස් භාවිතා වේ. නිදසුනක් ලෙස LEDයක් දැල්වීමට අවශ්‍ය නම් එම LEDයේ + අග්‍රය සම්බන්ධ Pin එකෙහි විභවය වැඩි කළ යුතුය. මේ සඳහා digitalWrite(PIN_ID,STATUS) යන කේතය යොදා ගැනේ. PIN_ID සඳහා ඔබය අවශ්‍ය Pin එකෙහි අංකයත්, STATUS සඳහා HIGH හෝ LOW ලෙසත් ලබා දීමෙන් එම Pin එකෙහි විභවය අඩු හෝ වැඩි කිරීම කළ හැකිය.
+    </p>
+    <p>
+      මෙහිදීද පෙර සිටම Pin එක භාවිත කරනුයේ ආදානයක් හෝ ප්‍රතිදානයක් සඳහාද යන්න ලබා දිය යුතුය. ඔබ LEDයක් දැල්වීමට හෝ නිවීමට යම් Pin එකක් භාවිත කරයි නම්, ආරම්භයේදී එය OUTPUT Pin එකක් බව හඳුන්වා දිය යුතුය.
+    </p>
+    <p>
+      අදාළ Pin එකක විභවය අඩුද වැඩිද යන්න කියවීමට digitalWrite(PIN_ID) කේතය භාවිතා වේ. එය බෙහෝ විට IF Statment එකක් ආධාරයෙන් භාවිත වේ.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        Connect UNO Board to your PC
+      </dd>
+    </dl>
+    <pre lang="cpp">
+void setup() {
+  pinMode(8, OUTPUT);
+  pinMode(10, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(8, HIGH);
+  digitalWrite(10, LOW);
+
+  int pin_st = -1;
+  if (digitalRead(8) == HIGH) {
+    pin_st = 1;
+  }
+  if (digitalRead(8) == LOW) {
+    pin_st = 1;
+  }
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

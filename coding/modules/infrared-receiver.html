@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="බොහෝමයක් විදුලියෙන් ක්‍රියාත්මක වන උපකරණ සඳහා (රූපවාහිනී, වායු සමීකරණ වැනි) ලැබෙන දුරස්ථ පාලකයේ ඇති සංඥා නිකුත් කරන තාක්ෂණය වන්නේ Infrared කිරණයි. මෙම කිරණය මගින් නිකුත් කරන සංඥාව හඳුනා ගැනීමට Infrared Receiver මොඩියුලයට හැකියාව ඇත.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="INFRARED RECEIVER භාවිතය">
+  <meta property="og:description" content="බොහෝමයක් විදුලියෙන් ක්‍රියාත්මක වන උපකරණ සඳහා (රූපවාහිනී, වායු සමීකරණ වැනි) ලැබෙන දුරස්ථ පාලකයේ ඇති සංඥා නිකුත් කරන තාක්ෂණය වන්නේ Infrared කිරණයි. මෙම කිරණය මගින් නිකුත් කරන සංඥාව හඳුනා ගැනීමට Infrared Receiver මොඩියුලයට හැකියාව ඇත.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="INFRARED RECEIVER භාවිතය">
+  <meta name="twitter:description" content="බොහෝමයක් විදුලියෙන් ක්‍රියාත්මක වන උපකරණ සඳහා (රූපවාහිනී, වායු සමීකරණ වැනි) ලැබෙන දුරස්ථ පාලකයේ ඇති සංඥා නිකුත් කරන තාක්ෂණය වන්නේ Infrared කිරණයි. මෙම කිරණය මගින් නිකුත් කරන සංඥාව හඳුනා ගැනීමට Infrared Receiver මොඩියුලයට හැකියාව ඇත.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>INFRARED RECEIVER භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">INFRARED RECEIVER භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        INFRARED RECEIVER භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      බොහෝමයක් විදුලියෙන් ක්‍රියාත්මක වන උපකරණ සඳහා (රූපවාහිනී, වායු සමීකරණ වැනි) ලැබෙන දුරස්ථ පාලකයේ ඇති සංඥා නිකුත් කරන තාක්ෂණය වන්නේ Infrared කිරණයි. මෙම කිරණය මගින් නිකුත් කරන සංඥාව හඳුනා ගැනීමට Infrared Receiver මොඩියුලයට හැකියාව ඇත. එම අගය ෂඩ් දශමට ආකාරයෙන් කියවීම සාමාන්‍යෙයන් සිදු කරයි. ඔබ ලඟ ඇති ඕනෑම දුරස්ථ පාලකයක එක් එක් බටන සඳහා නිකුත් කරණ සංඥා මෙමගින් හඳුනා ගත හැකි අතර, Infrared Transmitter මගින් එම ආකාරයට සංඥාව නිකුත් කිරීමේ හැකියව ඇත. මේ නිසා දුරස්ථ පාලකය නොමැතිව වුවද අදාළ උපකරණය දුරස්ථව පාලනය කළ හැක. මේ සඳහා භාවිතා කළ යුතු Library ගොනුව පහතින් ලබා ගන්න.
+    </p>
+    <a href="../../assets/libraries/arduino/IRremote.zip" target="_blank">
+      Download IRremote Library
+    </a>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x INFRARED RECEIVER
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        IRR(VCC) = 5V
+        <br>
+        IRR(GND) = GND
+        <br>
+        IRR(SIG) = PIN(7)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+#include &lt;IRremote.h&gt;
+
+const int irPin = 7;
+IRrecv irrecv(irPin);
+decode_results results;
+
+void setup() {
+  Serial.begin(9600);
+  irrecv.enableIRIn();
+  irrecv.blink13(true);
+}
+
+void loop() {
+  if (irrecv.decode( & results)) {
+    Serial.println(results.value, HEX);
+    irrecv.resume();
+  }
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="බොහෝ විට පරිගණක ක්‍රීඩා කටයුතු සඳහා භාවිතා වන Joystick මොඩියුලට මගින් ප්‍රධාන දිශා 4කට (ඉහළ, පහළ, වම සහ දකුණ) ලෙස කියවීම් ලබා ගැනේ. එමෙන්ම එහි තද කළ හැකි බටනයක්ද වේ.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="JOYSTICK MODULE භාවිතය">
+  <meta property="og:description" content="බොහෝ විට පරිගණක ක්‍රීඩා කටයුතු සඳහා භාවිතා වන Joystick මොඩියුලට මගින් ප්‍රධාන දිශා 4කට (ඉහළ, පහළ, වම සහ දකුණ) ලෙස කියවීම් ලබා ගැනේ. එමෙන්ම එහි තද කළ හැකි බටනයක්ද වේ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JOYSTICK MODULE භාවිතය">
+  <meta name="twitter:description" content="බොහෝ විට පරිගණක ක්‍රීඩා කටයුතු සඳහා භාවිතා වන Joystick මොඩියුලට මගින් ප්‍රධාන දිශා 4කට (ඉහළ, පහළ, වම සහ දකුණ) ලෙස කියවීම් ලබා ගැනේ. එමෙන්ම එහි තද කළ හැකි බටනයක්ද වේ.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>JOYSTICK MODULE භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">JOYSTICK MODULE භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        JOYSTICK MODULE භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      බොහෝ විට පරිගණක ක්‍රීඩා කටයුතු සඳහා භාවිතා වන Joystick මොඩියුලට මගින් ප්‍රධාන දිශා 4කට (ඉහළ, පහළ, වම සහ දකුණ) ලෙස කියවීම් ලබා ගැනේ. එමෙන්ම එහි තද කළ හැකි බටනයක්ද වේ. මේ ආකාරයට ප්‍රතිදාන ලබා ගැනීම සඳහා මෙම මොඩියුලයේ Pin 3 ක් සහ එයට අවශ්‍ය විදුලිය සැපයීමට Pin 2 ක්ද පවතී. දිශා සඳහා ප්‍රතිදාන ලබා දීමට Pin දෙකක් වේ. මෙම ප්‍රතිදාන ප්‍රතිසම ආකාරයේ ඒවා වන අතර ඉහළ සහ පහළ සඳහා එක් ප්‍රතිසම ප්‍රතිදානයක් (0 සහ 1023 අතර) ලබා දේ. මොඩියුලට ඉහළට හෝ පහළට චලනය කර නොමැති නම් එම ප්‍රතිදාන අගය මධ්‍ය අගයක් (500 ට ආසන්න) වේ. එය ඉහළට ගෙන ගිය විට එහි අගය අවම (0) වේ. පහළට ගෙන ගිය විට උපරිම (1023) වේ. වම සහ දකුණ සඳහාද මේ ආකාරයෙන් කියවීම් ලබා ගත හැකිය. බටනය සඳහා එක් Pin එකක් වෙන් වී ඇති අතර බටනය තද කළ විට එහි ප්‍රතිදාන අගය උපරිම වේ.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x JOYSTICK MODULE
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        JST(GND) = GND
+        <br>
+        JST(VCC) = 5V
+        <br>
+        JST(VRX) = PIN(A0)
+        <br>
+        JST(VRY) = PIN(A1)
+        <br>
+        JST(SW) = PIN(2)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+const int sw = 2;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(sw, INPUT_PULLUP);
+}
+
+void loop() {
+  int x = analogRead(A0);
+  int y = analogRead(A1);
+  int s = digitalRead(sw);
+
+  Serial.print(x);
+  Serial.print("	");
+  Serial.print(y);
+  Serial.print("	");
+  Serial.println(s);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

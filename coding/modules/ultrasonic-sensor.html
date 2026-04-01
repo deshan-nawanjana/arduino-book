@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="මෙම Sensor එක මගින් එයට ඉදිරියන් ඇති පෘෂ්ඨයට දුර මැනීමට යොදා ගත හැකිය. මෙයින් නිතුක් කරන ශබ්ද තරංගයක පරාවර්ථනය මේ සඳහා යොදා ගැනේ. මෙහි එන Trigger Pin එක මගින් ශබ්ද තරංග ස්ඵන්ධයක් පිට කෙරේ.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="ULTRASONIC SENSOR (USS) භාවිතය">
+  <meta property="og:description" content="මෙම Sensor එක මගින් එයට ඉදිරියන් ඇති පෘෂ්ඨයට දුර මැනීමට යොදා ගත හැකිය. මෙයින් නිතුක් කරන ශබ්ද තරංගයක පරාවර්ථනය මේ සඳහා යොදා ගැනේ. මෙහි එන Trigger Pin එක මගින් ශබ්ද තරංග ස්ඵන්ධයක් පිට කෙරේ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ULTRASONIC SENSOR (USS) භාවිතය">
+  <meta name="twitter:description" content="මෙම Sensor එක මගින් එයට ඉදිරියන් ඇති පෘෂ්ඨයට දුර මැනීමට යොදා ගත හැකිය. මෙයින් නිතුක් කරන ශබ්ද තරංගයක පරාවර්ථනය මේ සඳහා යොදා ගැනේ. මෙහි එන Trigger Pin එක මගින් ශබ්ද තරංග ස්ඵන්ධයක් පිට කෙරේ.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>ULTRASONIC SENSOR (USS) භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">ULTRASONIC SENSOR (USS) භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        ULTRASONIC SENSOR (USS) භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      මෙම Sensor එක මගින් එයට ඉදිරියන් ඇති පෘෂ්ඨයට දුර මැනීමට යොදා ගත හැකිය. මෙයින් නිතුක් කරන ශබ්ද තරංගයක පරාවර්ථනය මේ සඳහා යොදා ගැනේ. මෙහි එන Trigger Pin එක මගින් ශබ්ද තරංග ස්ඵන්ධයක් පිට කෙරේ. මෙහි කාල පරාසය මයික්‍රො තත්පර 10ක් ලෙස මෙම නිදසුනේ ලබා දී ඇත. එම කාල පරාසයටද ගණනය කිරීමට යොදා ගැනේ. Echo Pin එක මගින් එම නැවත පැමිණෙන ස්ඵන්දයේ කාල පරාසය ගෙන "වේගය = දුර / කාලය" යන සමීකරණය ආධාරයෙන් අදාළ දුර ගණනය කෙරේ. (වාතයේ ධ්වනි වේගය: තත්. මීටර 340 සහ කාලය තරංගය යාමට සහ ඒමට නිසා 2න් බෙදිය යුතුය.) මෙම නිදසුනේ ගණනය කිරීම් මගින් දුර ලබා දෙනුයේ සෙන්ටිමීටර වලිනි. එමෙන්ම මෙහි ආරම්භයේදී මිලිතත්පර දෙකක් Pin එක වසා තැබීමෙන් දෝෂ අවම කෙර්.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x ULTRASONIC SENSOR
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        USS(VCC) = 5V
+        <br>
+        USS(TRG) = PIN(10)
+        <br>
+        USS(ECH) = PIN(9)
+        <br>
+        USS(GND) = GND
+      </dd>
+    </dl>
+    <pre lang="cpp">
+int trigPin = 10;
+int echoPin = 9;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  long duration = pulseIn(echoPin, HIGH) / 2;
+
+  int distance = (duration * 340 * 100) / 1000000;
+  Serial.println(distance);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

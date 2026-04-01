@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Potintiometer තුළ ඇති විභව බෙදීම එහි පිහිටීම අනුව සිදු වී ඇති අයුරු කියවීම මෙම ක්‍රමලේකණය තුළින් සිදු වේ. මේ සඳහා මා විසින් 10K Ω Potintiometerක් යොදා ඇති අතර ඔබට අවශ්‍ය අගයක Potintiometerක් යෙදා ඊට අදාළව කේතයේ ඇති potResistance අගය වෙනස් කිරීමෙන් මෙම පරිපථය ක්‍රියාත්මක කළ හැකිය.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="Potentiometer එකෙහි විභව බෙදුම කියවීම">
+  <meta property="og:description" content="Potintiometer තුළ ඇති විභව බෙදීම එහි පිහිටීම අනුව සිදු වී ඇති අයුරු කියවීම මෙම ක්‍රමලේකණය තුළින් සිදු වේ. මේ සඳහා මා විසින් 10K Ω Potintiometerක් යොදා ඇති අතර ඔබට අවශ්‍ය අගයක Potintiometerක් යෙදා ඊට අදාළව කේතයේ ඇති potResistance අගය වෙනස් කිරීමෙන් මෙම පරිපථය ක්‍රියාත්මක කළ හැකිය.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Potentiometer එකෙහි විභව බෙදුම කියවීම">
+  <meta name="twitter:description" content="Potintiometer තුළ ඇති විභව බෙදීම එහි පිහිටීම අනුව සිදු වී ඇති අයුරු කියවීම මෙම ක්‍රමලේකණය තුළින් සිදු වේ. මේ සඳහා මා විසින් 10K Ω Potintiometerක් යොදා ඇති අතර ඔබට අවශ්‍ය අගයක Potintiometerක් යෙදා ඊට අදාළව කේතයේ ඇති potResistance අගය වෙනස් කිරීමෙන් මෙම පරිපථය ක්‍රියාත්මක කළ හැකිය.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>Potentiometer එකෙහි විභව බෙදුම කියවීම</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">Potentiometer එකෙහි විභව බෙදුම කියවීම</li>
+        </ol>
+      </nav>
+      <h1>
+        Potentiometer එකෙහි විභව බෙදුම කියවීම
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      Potintiometer තුළ ඇති විභව බෙදීම එහි පිහිටීම අනුව සිදු වී ඇති අයුරු කියවීම මෙම ක්‍රමලේකණය තුළින් සිදු වේ. මේ සඳහා මා විසින් 10K Ω Potintiometerක් යොදා ඇති අතර ඔබට අවශ්‍ය අගයක Potintiometerක් යෙදා ඊට අදාළව කේතයේ ඇති potResistance අගය වෙනස් කිරීමෙන් මෙම පරිපථය ක්‍රියාත්මක කළ හැකිය. මේ සඳහා යොදාගෙන ඇති මූලික සංකල්පය විභව බෙදුම් මූලධර්මයයි (V1/R1 = V2/R2) පරිපථය ක්‍රියාත්මක වන මොහොතේ Potintiometer එකෙහි Wiper එක කැරකැවීමෙන් එම අවස්ථාවේදීම ඒ හරහා විභවය හා ප්‍රතිරෝධය බෙදී ඇති අයුරු Serial Monitor මගින් මෙහිදී බලා ගත හැකිය.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x 10K Ω POTENTIOMETER
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        POT(T1) = 5V
+        <br>
+        POT(WP) = PIN(A0)
+        <br>
+        POT(T2) = GND
+      </dd>
+    </dl>
+    <pre lang="cpp">
+float potResistance = 10000.0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int ax = analogRead(A0);
+  float v1 = (ax * 5) / 1024.0;
+  float v2 = ((1023 - ax) * 5) / 1024.0;
+
+  float r1 = (v1 * potResistance) / (v1 + v2);
+  float r2 = (v2 * potResistance) / (v1 + v2);
+
+  Serial.print("V1 = ");
+  Serial.print(v1);
+  Serial.print(" , ");
+  Serial.print("V2 = ");
+  Serial.print(v2);
+  Serial.print("  |  ");
+  Serial.print("R1 = ");
+  Serial.print(r1);
+  Serial.print(" , ");
+  Serial.print("R2 = ");
+  Serial.println(r2);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="ප්‍රතිසම සංඥා කියවන Pin එකක් සමග දන්නා ප්‍රතිරෝධයක් සහ නොදන්නා ප්‍රතිරෝධයක් සම්බන්ධ කිරීමෙන් නෙදන්නා ප්‍රතිරෝධයේ අගය ගණනය කළ හැකිය. මේ සඳහා විභව බෙදුම් මූලධර්මය (V1/V2=R1/R2) භාවිතා කර තිබේ.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="Ohm Meter (ඕම් මීටරය)">
+  <meta property="og:description" content="ප්‍රතිසම සංඥා කියවන Pin එකක් සමග දන්නා ප්‍රතිරෝධයක් සහ නොදන්නා ප්‍රතිරෝධයක් සම්බන්ධ කිරීමෙන් නෙදන්නා ප්‍රතිරෝධයේ අගය ගණනය කළ හැකිය. මේ සඳහා විභව බෙදුම් මූලධර්මය (V1/V2=R1/R2) භාවිතා කර තිබේ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ohm Meter (ඕම් මීටරය)">
+  <meta name="twitter:description" content="ප්‍රතිසම සංඥා කියවන Pin එකක් සමග දන්නා ප්‍රතිරෝධයක් සහ නොදන්නා ප්‍රතිරෝධයක් සම්බන්ධ කිරීමෙන් නෙදන්නා ප්‍රතිරෝධයේ අගය ගණනය කළ හැකිය. මේ සඳහා විභව බෙදුම් මූලධර්මය (V1/V2=R1/R2) භාවිතා කර තිබේ.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>Ohm Meter (ඕම් මීටරය)</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">Ohm Meter (ඕම් මීටරය)</li>
+        </ol>
+      </nav>
+      <h1>
+        Ohm Meter (ඕම් මීටරය)
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      ප්‍රතිසම සංඥා කියවන Pin එකක් සමග දන්නා ප්‍රතිරෝධයක් සහ නොදන්නා ප්‍රතිරෝධයක් සම්බන්ධ කිරීමෙන් නෙදන්නා ප්‍රතිරෝධයේ අගය ගණනය කළ හැකිය. මේ සඳහා විභව බෙදුම් මූලධර්මය (V1/V2=R1/R2) භාවිතා කර තිබේ. දන්නා ප්‍රතිරෝධය A0 Pin එක සහ GND අතරට සම්බන්ධ බැවින් A0 සඳහා ලැබෙන්නේ දන්නා ප්‍රතිරෝධය හරහා විභව අන්තරයයි. (විභව අන්තරයට අනුරූප 0 - 1023 අතර අගය) මුලු විභව සැයපුම වන 5V අගයෙන් එම අගය අඩු කළ විට නොදන්නා ප්‍රතිරෝධය හරහා විභව අන්තරය ලැබේ. මේ ආකාරයෙන් අදාළ අගයන් ගෙන සමීකරණයට යෙදීමෙන් නොදන්නා ප්‍රතිරෝධයේ අගය ගණනය කළ හැකිය. මෙහිදී ගණනය කරන අගය වඩාත් නිවැරදි වන්නේ දන්නා සහ නොදන්නා ප්‍රතිරෝධයන්ගේ අගයන් අතර පරතරය අවම වන විටදී ය.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x 1k Ω RESISTOR (R1)
+        <br>
+        UNKNOWN RESISTORS (R2)
+      </dd>
+      <dt>
+        R1(T1) = GND
+        <br>
+        R1(T2) = R2(T1) = PIN(A0)
+        <br>
+        R2(T2) = 5V
+      </dt>
+      <dd>
+        Connect UNO Board to your PC
+      </dd>
+    </dl>
+    <pre lang="cpp">
+int APin = A0;
+float V0 = 5.0;
+
+float R1 = 1000.0;
+float R2 = 0.0;
+float V1 = 0.0;
+float V2 = 0.0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  float V1 = analogRead(APin) * V0 / 1024.0;
+  float V2 = V0 - V1;
+  float R2 = R1 * (V2 / V1);
+  Serial.println(R2);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

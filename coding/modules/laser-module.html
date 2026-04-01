@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="රතු ලේසර් ආලෝකයක් නිකුත් කිරීමේ හැකියව Laser මොඩියුලය සතු වේ. මෙහි Pin තුනක් පවතින අතර ඉන් දෙකක් මොඩියුලයට අවශ්‍ය විදුලිය සැපයීම සඳහා වන අතර අනෙක මගින් දැල්වීම සහ නිවීම සිදු කරයි.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="LASER MODULE භාවිතය">
+  <meta property="og:description" content="රතු ලේසර් ආලෝකයක් නිකුත් කිරීමේ හැකියව Laser මොඩියුලය සතු වේ. මෙහි Pin තුනක් පවතින අතර ඉන් දෙකක් මොඩියුලයට අවශ්‍ය විදුලිය සැපයීම සඳහා වන අතර අනෙක මගින් දැල්වීම සහ නිවීම සිදු කරයි.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LASER MODULE භාවිතය">
+  <meta name="twitter:description" content="රතු ලේසර් ආලෝකයක් නිකුත් කිරීමේ හැකියව Laser මොඩියුලය සතු වේ. මෙහි Pin තුනක් පවතින අතර ඉන් දෙකක් මොඩියුලයට අවශ්‍ය විදුලිය සැපයීම සඳහා වන අතර අනෙක මගින් දැල්වීම සහ නිවීම සිදු කරයි.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>LASER MODULE භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">LASER MODULE භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        LASER MODULE භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      රතු ලේසර් ආලෝකයක් නිකුත් කිරීමේ හැකියව Laser මොඩියුලය සතු වේ. මෙහි Pin තුනක් පවතින අතර ඉන් දෙකක් මොඩියුලයට අවශ්‍ය විදුලිය සැපයීම සඳහා වන අතර අනෙක මගින් දැල්වීම සහ නිවීම සිදු කරයි. මෙම Pin එක Signal Pin නම් වන අතර එහි ආදානය ඉහළ කළ විට ලේසරයට ක්‍රියාත්මක වේ. මෙම නිදසුනේ Laser මොඩියුලය තත්පරයට වරක් නිවි නිවී දැල්වෙන ආකාරයෙන් කේතනය කර ඇත.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x LASER MODULE
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        LSR(VCC) = 5V
+        <br>
+        LSR(GND) = GND
+        <br>
+        LSR(SIG) = PIN(8)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+const int lsrPin = 8;
+
+void setup() {
+  pinMode(lsrPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(lsrPin, HIGH);
+  delay(1000);
+  digitalWrite(lsrPin, LOW);
+  delay(1000);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

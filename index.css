@@ -1,0 +1,204 @@
+:root {
+  --background: #222;
+  --heading: #aaa;
+  --paragraph: #888;
+  --setup: #333;
+  --setup-item: #777;
+  --snippet: #111;
+  --code: #ddd;
+  --link: #06f;
+  --footer: #444;
+}
+
+* {
+  font-family: "Inter";
+}
+
+body {
+  margin: 20px;
+  background-color: var(--background);
+}
+
+article {
+  margin: 60px auto;
+  max-width: 900px;
+}
+
+@media (max-width: 960px) {
+  article {
+    margin: 20px auto;
+  }
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header address,
+header address a {
+  color: var(--paragraph);
+  font-size: 14px;
+}
+
+header address a {
+  text-decoration-line: underline;
+}
+
+header nav ol {
+  display: flex;
+  list-style: none;
+  margin: 10px 0px 0px 0px;
+  white-space: nowrap;
+  font-size: 13.5px;
+  color: var(--paragraph);
+  padding: 0px;
+  gap: 8px;
+}
+
+header nav ol li:not([aria-current])::after {
+  content: "\27A4";
+  margin-left: 8px;
+  font-size: 10px;
+  color: #555;
+}
+
+header nav ol li a {
+  color: var(--paragraph);
+  text-decoration: none;
+}
+
+header nav ol li a:hover {
+  text-decoration: underline;
+}
+
+header nav ol li[aria-current] {
+  max-width: calc(100vw - 190px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 28px;
+  color: var(--heading);
+}
+
+h2 {
+  font-size: 24px;
+  color: var(--heading);
+}
+
+p {
+  color: var(--paragraph);
+}
+
+ul {
+  padding: 0px 0px 0px 30px;
+  font-size: 15px;
+  color: var(--paragraph);
+}
+
+li {
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 400px;
+  max-width: calc(100vw - 80px);
+  margin: 30px auto;
+  display: block;
+}
+
+dl {
+  padding: 20px;
+  background-color: var(--setup);
+  color: var(--heading);
+  border-radius: 12px;
+  font-size: 15px;
+  margin: 30px 0px;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  padding: 5px 0px;
+  line-height: 20px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: var(--setup-item);
+}
+
+dl dt:nth-child(3) {
+  margin-top: 10px;
+}
+
+pre {
+  padding: 20px;
+  font-family: "FiraCode";
+  background-color: var(--snippet);
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--code);
+  overflow-x: auto;
+  margin: 30px 0px;
+}
+
+pre * {
+  font-family: "FiraCode";
+}
+
+pre::selection {
+  background-color: #fff2;
+}
+
+pre::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: #FFF4;
+  border-radius: 8px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  gap: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer h3 {
+  color: var(--paragraph);
+  margin: 0px;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  gap: 20px;
+}

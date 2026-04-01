@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Liquid Crystal Display මගින් අපිට අවශ්‍ය වැකියක් හෝ පණිවුඩයක් දර්ශණය කරගැනීමේ හැකියාව ඇත. මෙහිදී භාවිතා කර ඇත්තේ 16x2 ප්‍රමාණයේ අක්ෂර ප්‍රමාණයක් නිරූපණය කළ හැකි තිරයකි. LiquidCrystal.h යන Library ගොනුව මේ සඳහා අවශ්‍ය වේ.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="LIQUID CRYSTAL DISPLAY (LCD) භාවිතය">
+  <meta property="og:description" content="Liquid Crystal Display මගින් අපිට අවශ්‍ය වැකියක් හෝ පණිවුඩයක් දර්ශණය කරගැනීමේ හැකියාව ඇත. මෙහිදී භාවිතා කර ඇත්තේ 16x2 ප්‍රමාණයේ අක්ෂර ප්‍රමාණයක් නිරූපණය කළ හැකි තිරයකි. LiquidCrystal.h යන Library ගොනුව මේ සඳහා අවශ්‍ය වේ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LIQUID CRYSTAL DISPLAY (LCD) භාවිතය">
+  <meta name="twitter:description" content="Liquid Crystal Display මගින් අපිට අවශ්‍ය වැකියක් හෝ පණිවුඩයක් දර්ශණය කරගැනීමේ හැකියාව ඇත. මෙහිදී භාවිතා කර ඇත්තේ 16x2 ප්‍රමාණයේ අක්ෂර ප්‍රමාණයක් නිරූපණය කළ හැකි තිරයකි. LiquidCrystal.h යන Library ගොනුව මේ සඳහා අවශ්‍ය වේ.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>LIQUID CRYSTAL DISPLAY (LCD) භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">LIQUID CRYSTAL DISPLAY (LCD) භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        LIQUID CRYSTAL DISPLAY (LCD) භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      Liquid Crystal Display මගින් අපිට අවශ්‍ය වැකියක් හෝ පණිවුඩයක් දර්ශණය කරගැනීමේ හැකියාව ඇත. මෙහිදී භාවිතා කර ඇත්තේ 16x2 ප්‍රමාණයේ අක්ෂර ප්‍රමාණයක් නිරූපණය කළ හැකි තිරයකි. LiquidCrystal.h යන Library ගොනුව මේ සඳහා අවශ්‍ය වේ. මෙහි එන setCursor(X,Y) මගින් අදාල වැකිය දර්ශණ කළ යුතු පිහිටීම ලබා දිය හැකිය.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x LIQUID CRYSTAL DISPLAY
+        <br>
+        1 x 10K Ω POTENTIOMETER
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        LCD(VSS) = GND
+        <br>
+        LCD(VDD) = 5V
+        <br>
+        LCD(V0) = POT(WP)
+        <br>
+        LCD(RS) = PIN(7)
+        <br>
+        LCD(RW) = GND
+        <br>
+        LCD(D4) = PIN(9)
+        <br>
+        LCD(D5) = PIN(10)
+        <br>
+        LCD(D6) = PIN(11)
+        <br>
+        LCD(D7) = PIN(12)
+        <br>
+        LCD(A) = 5V
+        <br>
+        LCD(K) = GND
+        <br>
+        LCD(E) = PIN(8)
+        <br>
+        POT(T1) = 5V
+        <br>
+        POT(T2) = GND
+      </dd>
+    </dl>
+    <pre lang="cpp">
+#include &lt;LiquidCrystal.h&gt;
+
+LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.setCursor(0, 0);
+  lcd.print("First Line Text");
+}
+
+int x = 0;
+
+void loop() {
+  x += 1;
+  lcd.setCursor(0, 1);
+  lcd.print(x);
+  delay(1000);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="අවට දුමක් පවතින අවස්තාවක එය හඳුනාගැනීම සඳහා මෙම Gas Detection Sensor එක භාවිතා කළ හැකිය. මෙම සංවේදකයේ අග්‍ර 4ක් පවතින අතර ඉන් දෙකක් සංවේදකයට අවශ්‍ය විදුලිය සැපයීම සඳහා වන අතර අනෙක් අ‍ග්‍ර දෙක මගින් සංකිත සහ ප්‍රතිසම ආකාරයේ ප්‍රතිදානයන් ලබා ගත හැකිය.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="SMOKE DETECTION SENSOR භාවිතය">
+  <meta property="og:description" content="අවට දුමක් පවතින අවස්තාවක එය හඳුනාගැනීම සඳහා මෙම Gas Detection Sensor එක භාවිතා කළ හැකිය. මෙම සංවේදකයේ අග්‍ර 4ක් පවතින අතර ඉන් දෙකක් සංවේදකයට අවශ්‍ය විදුලිය සැපයීම සඳහා වන අතර අනෙක් අ‍ග්‍ර දෙක මගින් සංකිත සහ ප්‍රතිසම ආකාරයේ ප්‍රතිදානයන් ලබා ගත හැකිය.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SMOKE DETECTION SENSOR භාවිතය">
+  <meta name="twitter:description" content="අවට දුමක් පවතින අවස්තාවක එය හඳුනාගැනීම සඳහා මෙම Gas Detection Sensor එක භාවිතා කළ හැකිය. මෙම සංවේදකයේ අග්‍ර 4ක් පවතින අතර ඉන් දෙකක් සංවේදකයට අවශ්‍ය විදුලිය සැපයීම සඳහා වන අතර අනෙක් අ‍ග්‍ර දෙක මගින් සංකිත සහ ප්‍රතිසම ආකාරයේ ප්‍රතිදානයන් ලබා ගත හැකිය.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>SMOKE DETECTION SENSOR භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">SMOKE DETECTION SENSOR භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        SMOKE DETECTION SENSOR භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      අවට දුමක් පවතින අවස්තාවක එය හඳුනාගැනීම සඳහා මෙම Gas Detection Sensor එක භාවිතා කළ හැකිය. මෙම සංවේදකයේ අග්‍ර 4ක් පවතින අතර ඉන් දෙකක් සංවේදකයට අවශ්‍ය විදුලිය සැපයීම සඳහා වන අතර අනෙක් අ‍ග්‍ර දෙක මගින් සංකිත සහ ප්‍රතිසම ආකාරයේ ප්‍රතිදානයන් ලබා ගත හැකිය. අවට පරිසරයේ දුමක් පවතින ප්‍රතිශතය අනුව මෙහි ලැබෙන ප්‍රදිසම ප්‍රතිදානය 0 සිට 1023 අතර විචලනය වන අගයක් පෙන්වයි. නිදසුනක් ලෙස දල්වන ලද හඳුන් කූරක් මෙම සංවේදකය අසළට ගෙන ආ විට එම ප්‍රතිදාන අගය ඉහළ යයි. මේ ආකාරයෙන් ඉතා පහසුවෙන් දුමක් හඳනා ගැනීම සඳහා Gas Detection Sensor එක භාවිතා කළ හැකිය.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x SMOKE DETECTION SENSOR
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        SDS(VCC) = 5V
+        <br>
+        SDS(GND) = GND
+        <br>
+        SDS(A0) = PIN(A0)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int x = analogRead(A0);
+  Serial.println(x);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

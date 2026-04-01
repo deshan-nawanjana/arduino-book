@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="PIR සංවේදකය මගින් ඒ අසළ සිදු වන තාප චලනයක් හඳුනාගත හැකිය. බෙහෝ විට මෙවැනි සංවේදක ආරක්ෂක පද්ධති සඳහා උචිත වන්නේ මෙමගින් සත්ත්ව චලනයන් අනාවර්ණය කළ හැකි නිසාවෙනි. මෙම සංවේදකයේ Pins 3 පවතී.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="PASSIVE INFRARED SENSOR (PIR) භාවිතය">
+  <meta property="og:description" content="PIR සංවේදකය මගින් ඒ අසළ සිදු වන තාප චලනයක් හඳුනාගත හැකිය. බෙහෝ විට මෙවැනි සංවේදක ආරක්ෂක පද්ධති සඳහා උචිත වන්නේ මෙමගින් සත්ත්ව චලනයන් අනාවර්ණය කළ හැකි නිසාවෙනි. මෙම සංවේදකයේ Pins 3 පවතී.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PASSIVE INFRARED SENSOR (PIR) භාවිතය">
+  <meta name="twitter:description" content="PIR සංවේදකය මගින් ඒ අසළ සිදු වන තාප චලනයක් හඳුනාගත හැකිය. බෙහෝ විට මෙවැනි සංවේදක ආරක්ෂක පද්ධති සඳහා උචිත වන්නේ මෙමගින් සත්ත්ව චලනයන් අනාවර්ණය කළ හැකි නිසාවෙනි. මෙම සංවේදකයේ Pins 3 පවතී.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>PASSIVE INFRARED SENSOR (PIR) භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">PASSIVE INFRARED SENSOR (PIR) භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        PASSIVE INFRARED SENSOR (PIR) භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      PIR සංවේදකය මගින් ඒ අසළ සිදු වන තාප චලනයක් හඳුනාගත හැකිය. බෙහෝ විට මෙවැනි සංවේදක ආරක්ෂක පද්ධති සඳහා උචිත වන්නේ මෙමගින් සත්ත්ව චලනයන් අනාවර්ණය කළ හැකි නිසාවෙනි. මෙම සංවේදකයේ Pins 3 පවතී. ඉන් දෙකක් මෙම සංවේදකයටම විදුළිය සැපයීම සඳහා වන අතර අනෙක් Pin එක එහි ප්‍රතිධානය කියවීම සඳහා වේ. චලනයක් නිරීක්ෂණය කළ සැනින් ඉහළ ප්‍රතිදානයක් ලබා දෙන අතර යම් ප්‍රමාද කාලයකින් පසුව නැවත එය යථා තත්ත්වයට පත් වේ. මෙම ප්‍රදාඹ කාලය සංවේදකයේ ඇති Tx Pot එක මගින් සහ මෙහි සංවේදීතාවය Sx Pot එක මගින් වෙනස් කළ හැකිය.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x PASSIVE INFRARED SENSOR
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        PIR(VCC) = 5V
+        <br>
+        PIR(OUT) = PIN(2)
+        <br>
+        PIR(GND) = GND
+      </dd>
+    </dl>
+    <pre lang="cpp">
+const int PIRPin = 2;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(PIRPin, INPUT);
+}
+
+void loop() {
+  int PIRRead = digitalRead(PIRPin);
+  if (PIRRead == HIGH) {
+    Serial.println("Motion Detected !");
+  } else {
+    Serial.println("No Detection.");
+  }
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

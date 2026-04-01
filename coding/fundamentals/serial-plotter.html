@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Serial Monitor මගින් තිරය මත දත්ත නිරූපණය කිරීම අක්ෂර සහ අංක මගින් සිදු වේ. නමුත් ඔබට ප්‍රස්ථාරික ආකාරයෙන් දත්ත නිරූපණයට අවශ්‍ය නම් ඒ සඳහා Serial Plotter භාවිතා කිරීමට සිදු වේ.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="Serial Plotter මගින් දත්ත නිරූපණය">
+  <meta property="og:description" content="Serial Monitor මගින් තිරය මත දත්ත නිරූපණය කිරීම අක්ෂර සහ අංක මගින් සිදු වේ. නමුත් ඔබට ප්‍රස්ථාරික ආකාරයෙන් දත්ත නිරූපණයට අවශ්‍ය නම් ඒ සඳහා Serial Plotter භාවිතා කිරීමට සිදු වේ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Serial Plotter මගින් දත්ත නිරූපණය">
+  <meta name="twitter:description" content="Serial Monitor මගින් තිරය මත දත්ත නිරූපණය කිරීම අක්ෂර සහ අංක මගින් සිදු වේ. නමුත් ඔබට ප්‍රස්ථාරික ආකාරයෙන් දත්ත නිරූපණයට අවශ්‍ය නම් ඒ සඳහා Serial Plotter භාවිතා කිරීමට සිදු වේ.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>Serial Plotter මගින් දත්ත නිරූපණය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">Serial Plotter මගින් දත්ත නිරූපණය</li>
+        </ol>
+      </nav>
+      <h1>
+        Serial Plotter මගින් දත්ත නිරූපණය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      Serial Monitor මගින් තිරය මත දත්ත නිරූපණය කිරීම අක්ෂර සහ අංක මගින් සිදු වේ. නමුත් ඔබට ප්‍රස්ථාරික ආකාරයෙන් දත්ත නිරූපණයට අවශ්‍ය නම් ඒ සඳහා Serial Plotter භාවිතා කිරීමට සිදු වේ. Tools > Serial Plotter මගින් මෙම මෙවළම විවෘත කළ හැකි අතර Serial Monitor මෙමගින් ඔබ දර්ශණය කිරීමට බලාපොරොත්තු වන දත්තයෙහි සංඛ්‍යාත්මක අගය ගෙන එය කාලයට අනුරූපව විචලනය වන අයුරින් ප්‍රස්ථාරයක දැක්වීම සිදු වේ. මෙහි එන නිදසුනේ දැක්වෙනුයේ i නමැති විචල්‍යයක් 0 සිට 50 දක්වාත් නැවත 0 දක්වාත් විචලනය වීම පරිගණකයේ දර්ශණය වීමට සැලැස්වීමයි. එය Serial Moitor මගින් සාමාන්‍ය ආකාරයෙන් එකින් එක පහළින් පහළට සංඛ්‍යාත්මකව දර්ශණය කරන අතරම Serial Plotter මගින් එය කාලයට අනුරූපව ප්‍රස්ථාරික ආකරයෙන් දර්ශණය කරයි. මෙහිදී ඔබට Serial Monitor සහ Serial Plotter එක වර විවෘත කළ නොහැකි අතර එක් වරකට භාවිත කළ හැක්කේ ඉන් එකක් පමණි.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        Connect UNO Board to your PC
+      </dd>
+    </dl>
+    <pre lang="cpp">
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  for (int i = 0; i < 50; i++) {
+    Serial.println(i);
+  }
+  for (int i = 49; i > -1; i--) {
+    Serial.println(i);
+  }
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

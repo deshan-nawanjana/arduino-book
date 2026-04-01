@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="ඔබ දන්නා ආකාරයට Ardiuno පුවරුව මත වැඩි භාවිතයක් ඇති Pins 13ක් පවතී මෙම Pins සමග විවිධ ඉලෙක්ට්‍රොනික උපාංග සම්බන්ධ කරනු ලැබේ. එසේ සම්බන්ධ කිරීමේදී එම Pins යොදාගන්නේ ආදානය සඳහාද, නැතිනම් ප්‍රතිදානය සඳහාද යන්න ප්‍රථමයෙන් දැක්විය යුතුය.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="PIN MODE හඳුන්වාදීම">
+  <meta property="og:description" content="ඔබ දන්නා ආකාරයට Ardiuno පුවරුව මත වැඩි භාවිතයක් ඇති Pins 13ක් පවතී මෙම Pins සමග විවිධ ඉලෙක්ට්‍රොනික උපාංග සම්බන්ධ කරනු ලැබේ. එසේ සම්බන්ධ කිරීමේදී එම Pins යොදාගන්නේ ආදානය සඳහාද, නැතිනම් ප්‍රතිදානය සඳහාද යන්න ප්‍රථමයෙන් දැක්විය යුතුය.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PIN MODE හඳුන්වාදීම">
+  <meta name="twitter:description" content="ඔබ දන්නා ආකාරයට Ardiuno පුවරුව මත වැඩි භාවිතයක් ඇති Pins 13ක් පවතී මෙම Pins සමග විවිධ ඉලෙක්ට්‍රොනික උපාංග සම්බන්ධ කරනු ලැබේ. එසේ සම්බන්ධ කිරීමේදී එම Pins යොදාගන්නේ ආදානය සඳහාද, නැතිනම් ප්‍රතිදානය සඳහාද යන්න ප්‍රථමයෙන් දැක්විය යුතුය.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>PIN MODE හඳුන්වාදීම</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">PIN MODE හඳුන්වාදීම</li>
+        </ol>
+      </nav>
+      <h1>
+        PIN MODE හඳුන්වාදීම
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      ඔබ දන්නා ආකාරයට Ardiuno පුවරුව මත වැඩි භාවිතයක් ඇති Pins 13ක් පවතී මෙම Pins සමග විවිධ ඉලෙක්ට්‍රොනික උපාංග සම්බන්ධ කරනු ලැබේ. එසේ සම්බන්ධ කිරීමේදී එම Pins යොදාගන්නේ ආදානය සඳහාද, නැතිනම් ප්‍රතිදානය සඳහාද යන්න ප්‍රථමයෙන් දැක්විය යුතුය. නිදසුනක් වශයෙන් 6වන Pin එකට LEDය + අග්‍රය සම්බන්ධ වේ නම් එම Pin එක ප්‍රතිදාන Pin එකක් ලෙස දැක්විය යුතුය. (LED මගින් විදුලිය වැය කර ආලෝකය නිකුත් කරන නිසා එය පුවරුවෙන් දත්ත ප්‍රතිදානය කරන සංරචකයක් ලෙස හැඳින්වේ) ඔබ 3වන Pin එකට Ultrasonic Sensor එකෙහි Echo අග්‍රයක් සම්බන්ධ කරයි නම් එම Pin එම පුවරුවට දත්ත ආදානය කරන Pin එකක් ලෙස හඳුන්වා දිය යුතුය. (Ultrasonic Sensor එකෙහි Echo අග්‍රය මගින් ඉදිරියෙන් ඇති බාධකයකට ඇති දුර මැනීමට අවශ්‍ය දත්ත ලබා දේ)
+    </p>
+    <p>
+      මේ ආකාරයට යම් කිසි Pin එකක් ආදානය හෝ ප්‍රතිදානය සඳහා යොදාගන්න විට කලින් එය හඳුන්වා දීමට pinMode(PIN_ID,TYPE) යන කේතය භාවිත කරයි. මෙහි PIN_ID ලෙස Pin එකෙහි අංකයත් TYPE සඳහා INPUT හෝ OUTPUT යන කේත වචන වලින් එකක් යොදා ගැනේ. බොහෝ විට මෙම හැඳින්වීම කරනුයේ setup කොටස තුළයි. නමුත් ඔබට අවශ්‍ය විට එය loop කොටස තුළද ඇතුලත් කළ හැකිය.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        Connect UNO Board to your PC
+      </dd>
+    </dl>
+    <pre lang="cpp">
+void setup() {
+  pinMode(6, OUTPUT);
+  pinMode(3, INPUT);
+}
+
+void loop() {
+
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

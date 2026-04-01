@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Arduino සඳහා යොදා ගන්නා විධ ආකාරයේ මෝටර පවතින අතර ඉන් සුවිශේසී මෝටර වර්ගයක් ලෙස Servo Motor හඳුන්වා දිය හැකිය. මෙම මෝටර් වර්ගයේ විශේෂත්වය නම්, මෝටර ඇක්සලය අප ලබා දෙන නිශ්චිත කෝණයකට භ්‍රමණය කළ හැකි වීමයි.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="SERVO MOTOR භාවිතය">
+  <meta property="og:description" content="Arduino සඳහා යොදා ගන්නා විධ ආකාරයේ මෝටර පවතින අතර ඉන් සුවිශේසී මෝටර වර්ගයක් ලෙස Servo Motor හඳුන්වා දිය හැකිය. මෙම මෝටර් වර්ගයේ විශේෂත්වය නම්, මෝටර ඇක්සලය අප ලබා දෙන නිශ්චිත කෝණයකට භ්‍රමණය කළ හැකි වීමයි.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SERVO MOTOR භාවිතය">
+  <meta name="twitter:description" content="Arduino සඳහා යොදා ගන්නා විධ ආකාරයේ මෝටර පවතින අතර ඉන් සුවිශේසී මෝටර වර්ගයක් ලෙස Servo Motor හඳුන්වා දිය හැකිය. මෙම මෝටර් වර්ගයේ විශේෂත්වය නම්, මෝටර ඇක්සලය අප ලබා දෙන නිශ්චිත කෝණයකට භ්‍රමණය කළ හැකි වීමයි.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>SERVO MOTOR භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">SERVO MOTOR භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        SERVO MOTOR භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      Arduino සඳහා යොදා ගන්නා විධ ආකාරයේ මෝටර පවතින අතර ඉන් සුවිශේසී මෝටර වර්ගයක් ලෙස Servo Motor හඳුන්වා දිය හැකිය. මෙම මෝටර් වර්ගයේ විශේෂත්වය නම්, මෝටර ඇක්සලය අප ලබා දෙන නිශ්චිත කෝණයකට භ්‍රමණය කළ හැකි වීමයි. මේ සඳහා Servo.h නම් වූ Library File ඒක භාවිතා කළ යුතු අතර එය Arduino IDE මෘදුකාංගය සමගම පරිගණකයේ ස්ථාපිත වේ. මෙහිදී servo_name.attach(PIN_ID) යන කේතයෙන් මෝටරය වෙත සංඥා සපයන Pin එක ලබා දේ. මෝටරයේ අනෙක් Pin දෙක මෝටරයට අවශ්‍ය විදුලිය සැපයීමට භාවිතා වේ. මෝටරය ක්‍රියාත්මක කිරීමේ දී servo_name.write(ANGLE) යන කේතයෙන් මෝටරය කැරකැවිය යුතු කෝණය ලබා දිය හැකිය. මෙම නිදසුනේ ඇත්තේ තත්පරයෙන් 1/10 කට වරක් එහි කෝණය අංශක 10 බැගින් වෙනස් වන අයුරින් ලියූ වැඩසටහනකි.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x SERVO MOTOR
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        SVR(VCC) = 5V
+        <br>
+        SVR(GND) = GND
+        <br>
+        SVR(IN) = PIN(10)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+#include &lt;Servo.h&gt;
+
+Servo svr;
+
+void setup() {
+  Serial.begin(9600);
+  svr.attach(10);
+}
+
+void loop() {
+  for (int i = 0; i < 181; i += 10) {
+    svr.write(i);
+    delay(100);
+  }
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

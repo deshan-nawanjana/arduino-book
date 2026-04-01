@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Infrared Sensor මගින් ඉදිරියෙන් ඇති අඳුරු සහ ආලෝකමත් පෘෂ්ඨ හඳුනාගත හැකිය. මෙහි ඇති කලු පැහැති IR දියෝඩයෙන් නිකුත් වන කිරණය ඉදිරියේ ඇති පෘෂ්ඨයක වැදී නැවත පරාවර්ථනය වී Photodiode (අවර්ණ දියෝඩය) වෙත පැමිණේ.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="INFRARED SENSOR (IR) භාවිතය">
+  <meta property="og:description" content="Infrared Sensor මගින් ඉදිරියෙන් ඇති අඳුරු සහ ආලෝකමත් පෘෂ්ඨ හඳුනාගත හැකිය. මෙහි ඇති කලු පැහැති IR දියෝඩයෙන් නිකුත් වන කිරණය ඉදිරියේ ඇති පෘෂ්ඨයක වැදී නැවත පරාවර්ථනය වී Photodiode (අවර්ණ දියෝඩය) වෙත පැමිණේ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="INFRARED SENSOR (IR) භාවිතය">
+  <meta name="twitter:description" content="Infrared Sensor මගින් ඉදිරියෙන් ඇති අඳුරු සහ ආලෝකමත් පෘෂ්ඨ හඳුනාගත හැකිය. මෙහි ඇති කලු පැහැති IR දියෝඩයෙන් නිකුත් වන කිරණය ඉදිරියේ ඇති පෘෂ්ඨයක වැදී නැවත පරාවර්ථනය වී Photodiode (අවර්ණ දියෝඩය) වෙත පැමිණේ.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>INFRARED SENSOR (IR) භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">INFRARED SENSOR (IR) භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        INFRARED SENSOR (IR) භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      Infrared Sensor මගින් ඉදිරියෙන් ඇති අඳුරු සහ ආලෝකමත් පෘෂ්ඨ හඳුනාගත හැකිය. මෙහි ඇති කලු පැහැති IR දියෝඩයෙන් නිකුත් වන කිරණය ඉදිරියේ ඇති පෘෂ්ඨයක වැදී නැවත පරාවර්ථනය වී Photodiode (අවර්ණ දියෝඩය) වෙත පැමිණේ. ඉදිරියෙන් ඇත්තේ අඳුරු පෘෂ්ඨයක් නම් ගමන් කළ කිරණ පරාවර්ථනය නොව්. එය පරාවර්ථනය වන්නේ ආලෝකමත්ල සුදට හුරු පෘෂ්ඨ මගින් පමණි. එම නිසා IR Sensor මගින් කලු සහ සුදු වර්ණ පහසුවෙන් හඳුනාගත හැකිය. කිරණ නැවත පැමිණේ නම් ප්‍රතිදානය LOW සහ නොමැති නම් HIGH ලෙසද ප්‍රතිදාන Pin එක වෙත ලැබේ.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x IR SENSOR
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        IRS(VCC) = 5V
+        <br>
+        IRS(GND) = GND
+        <br>
+        IRS(OUT) = PIN(8)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int x = digitalRead(8);
+  if (x == LOW) {
+    Serial.println("IR Received (LIGHT SURFACE)");
+  } else {
+    Serial.println("IR NOT Received (DARK SURFACE)");
+  }
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

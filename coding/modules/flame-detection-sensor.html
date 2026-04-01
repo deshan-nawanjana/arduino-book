@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="නුදුරින් ඇති ගින්නක් හඳුනාගැනීම සඳහා මෙම Flame Detection Sensor එක භාවිතා කරයි. මෙම සංවේදකයේ අග්‍ර තුනක් ඇති අතර ඉන් දෙකක් සංවේදකය බලය සැපයීම සඳහා වන අතර අනෙක් අග්‍රය මගින් ප්‍රතිදාන අංකිත අගය කියවීම සිදු කරයි.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="FLAME DETECTION SENSOR භාවිතය">
+  <meta property="og:description" content="නුදුරින් ඇති ගින්නක් හඳුනාගැනීම සඳහා මෙම Flame Detection Sensor එක භාවිතා කරයි. මෙම සංවේදකයේ අග්‍ර තුනක් ඇති අතර ඉන් දෙකක් සංවේදකය බලය සැපයීම සඳහා වන අතර අනෙක් අග්‍රය මගින් ප්‍රතිදාන අංකිත අගය කියවීම සිදු කරයි.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FLAME DETECTION SENSOR භාවිතය">
+  <meta name="twitter:description" content="නුදුරින් ඇති ගින්නක් හඳුනාගැනීම සඳහා මෙම Flame Detection Sensor එක භාවිතා කරයි. මෙම සංවේදකයේ අග්‍ර තුනක් ඇති අතර ඉන් දෙකක් සංවේදකය බලය සැපයීම සඳහා වන අතර අනෙක් අග්‍රය මගින් ප්‍රතිදාන අංකිත අගය කියවීම සිදු කරයි.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>FLAME DETECTION SENSOR භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">FLAME DETECTION SENSOR භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        FLAME DETECTION SENSOR භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      නුදුරින් ඇති ගින්නක් හඳුනාගැනීම සඳහා මෙම Flame Detection Sensor එක භාවිතා කරයි. මෙම සංවේදකයේ අග්‍ර තුනක් ඇති අතර ඉන් දෙකක් සංවේදකය බලය සැපයීම සඳහා වන අතර අනෙක් අග්‍රය මගින් ප්‍රතිදාන අංකිත අගය කියවීම සිදු කරයි. ගිණි අනතුරක් හඳුනාගත නොහැකි නම් එම ප්‍රතිදාන අගය උපරිම වන අතර ගිණි දැල්ලක් හඳුනාගත් වහිම එහි ප්‍රතිදානය අවම අගයකට පත් වේ. මේ නිසා ඉතා පහසුවෙන් Flame Detection Sensor මගින් ගිණි අනතුරක් හඳුනාගැනීමේ හැකියාව පවතී.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x FLAME DETECTION SENSOR
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        FDS(VCC) = 5V
+        <br>
+        FDS(GND) = GND
+        <br>
+        FDS(D0) = PIN(4)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+void setup() {
+  Serial.begin(9600);
+  pinMode(4, INPUT);
+}
+
+void loop() {
+  if (digitalRead(4) == LOW) {
+    Serial.println("FIRE DETECTED!!!");
+  } else {
+    Serial.println("No fire detected.");
+  }
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

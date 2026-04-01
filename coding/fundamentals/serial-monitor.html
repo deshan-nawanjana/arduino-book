@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="මේ සඳහා මුලින්ම setup යන කොටසේ Serial.begin(BAUD_RATE) ලෙස කේතයක් යෙදීමෙන් ස්ම්ප්‍රේෂණ මාරගය විවෘත කළ යුතුය. මෙහිදී බහුලව යොදාගන්න BAUD_RATE එක වන්නේ 9600 යි. පසුව ඔබට අවශ්‍ය අවස්ථාවකදී පුවරුවෙන් දත්ත යැවීමට Serial.println(DATA) භාවිත කළ හැකිය.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="Serial Monitor සමග දත්ත හුවමාරුව">
+  <meta property="og:description" content="මේ සඳහා මුලින්ම setup යන කොටසේ Serial.begin(BAUD_RATE) ලෙස කේතයක් යෙදීමෙන් ස්ම්ප්‍රේෂණ මාරගය විවෘත කළ යුතුය. මෙහිදී බහුලව යොදාගන්න BAUD_RATE එක වන්නේ 9600 යි. පසුව ඔබට අවශ්‍ය අවස්ථාවකදී පුවරුවෙන් දත්ත යැවීමට Serial.println(DATA) භාවිත කළ හැකිය.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Serial Monitor සමග දත්ත හුවමාරුව">
+  <meta name="twitter:description" content="මේ සඳහා මුලින්ම setup යන කොටසේ Serial.begin(BAUD_RATE) ලෙස කේතයක් යෙදීමෙන් ස්ම්ප්‍රේෂණ මාරගය විවෘත කළ යුතුය. මෙහිදී බහුලව යොදාගන්න BAUD_RATE එක වන්නේ 9600 යි. පසුව ඔබට අවශ්‍ය අවස්ථාවකදී පුවරුවෙන් දත්ත යැවීමට Serial.println(DATA) භාවිත කළ හැකිය.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>Serial Monitor සමග දත්ත හුවමාරුව</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">Serial Monitor සමග දත්ත හුවමාරුව</li>
+        </ol>
+      </nav>
+      <h1>
+        Serial Monitor සමග දත්ත හුවමාරුව
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      Arduino පුවරුව පරිගණකයට සම්බන්ධ කර ඇති අවස්ථාවක පුවරුව හා පරිගණකය අතර දත්ත සම්ප්‍රේෂණය කිරීමේ හැකියාවක් පවතී. Arduino IDE මෘදුකාංගයේ ඇති මෙම මෙවලම Serial Monitor නම් වේ. එය Arduino IDE තිරයේ දකුණු ඉහළ කෙලවරේ ඇති බටනය මගින් විවෘත කළ හැකිය.
+    </p>
+    <p>
+      මේ සඳහා මුලින්ම setup යන කොටසේ Serial.begin(BAUD_RATE) ලෙස කේතයක් යෙදීමෙන් ස්ම්ප්‍රේෂණ මාරගය විවෘත කළ යුතුය. මෙහිදී බහුලව යොදාගන්න BAUD_RATE එක වන්නේ 9600 යි. පසුව ඔබට අවශ්‍ය අවස්ථාවකදී පුවරුවෙන් දත්ත යැවීමට Serial.println(DATA) භාවිත කළ හැකිය. මේ ආකාරයෙන් පරිගණකය වෙත යවනු ලබන දත්ත Serial Monitor එකෙහි පිළිවෙලින් මුද්‍රණය වේ. ඔබට අවශ්‍ය ඕනෑම ආකාරයක දත්තයක් (ප්‍රතිසම හෝ අංකිත කියවුමක්, පණිවුඩයක්) Serial Monitor වෙත සම්ප්‍රේෂණය කළ හැකිය.එමෙන්ම Serial Monitorහි ඉහලින් ඇති Textbox එක මත ඔබට අවශ්‍ය දත්තයක් හෝ පණිවුඩයක් යතුරු ලියනය කර Send Button එක මගින් පුවරුව වෙත සම්ප්‍රේෂණය කළ හැකිය. එම දත්ත පුවරුව මගින් කියවීම කරනුයේ Serial.read() විධානය මගිනි. කෙසේ වෙතත් එම කෙතයට පෙර පණිවුඩ ඇති දැයි Serial.available() මගින් හඳුනාගෙන සිටිය යුතුය.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        Connect UNO Board to your PC
+      </dd>
+    </dl>
+    <pre lang="cpp">
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int snd_data = analogRead(6);
+  Serial.println(snd_data);
+
+  String rec_data;
+  if (Serial.available() > 0) {
+    rec_data = Serial.read();
+  }
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="මෙම සංවේදකය මගින් පරිසර උෂ්ණත්වය සහ පීඩනය ගණනය කිරීමේ හැකියාව පවතී. එමෙන්ම මෙම සංවදෙකය ක්‍රියාත්මක කිරීමට සහ ඉන් ප්‍රතිදාන ලබා ගැනීමට පහත දැක්වෙන Library ගොනුව ඔබගේ Arduino IDE මෘදුකාංගයට එක් කරගන්න.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="PRESSURE SENSOR භාවිතය">
+  <meta property="og:description" content="මෙම සංවේදකය මගින් පරිසර උෂ්ණත්වය සහ පීඩනය ගණනය කිරීමේ හැකියාව පවතී. එමෙන්ම මෙම සංවදෙකය ක්‍රියාත්මක කිරීමට සහ ඉන් ප්‍රතිදාන ලබා ගැනීමට පහත දැක්වෙන Library ගොනුව ඔබගේ Arduino IDE මෘදුකාංගයට එක් කරගන්න.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PRESSURE SENSOR භාවිතය">
+  <meta name="twitter:description" content="මෙම සංවේදකය මගින් පරිසර උෂ්ණත්වය සහ පීඩනය ගණනය කිරීමේ හැකියාව පවතී. එමෙන්ම මෙම සංවදෙකය ක්‍රියාත්මක කිරීමට සහ ඉන් ප්‍රතිදාන ලබා ගැනීමට පහත දැක්වෙන Library ගොනුව ඔබගේ Arduino IDE මෘදුකාංගයට එක් කරගන්න.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>PRESSURE SENSOR භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">PRESSURE SENSOR භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        PRESSURE SENSOR භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      මෙම සංවේදකය මගින් පරිසර උෂ්ණත්වය සහ පීඩනය ගණනය කිරීමේ හැකියාව පවතී. එමෙන්ම මෙම සංවදෙකය ක්‍රියාත්මක කිරීමට සහ ඉන් ප්‍රතිදාන ලබා ගැනීමට පහත දැක්වෙන Library ගොනුව ඔබගේ Arduino IDE මෘදුකාංගයට එක් කරගන්න. තවද මෙම ක්‍රමලේඛණයේ එන ALTITUDE යන්නට ඔබගේ ප්‍රදේශයේ මුහුදු මට්ටමේ සිට උස මීටරවලින් ලබා දෙන්න. එය මෙහිදී පීඩනය ගණනය කිරීමේදී උපයෝගී කරගනී.
+    </p>
+    <a href="../../assets/libraries/arduino/SFE_BMP180.zip" target="_blank">
+      Download SFE_BMP180 Library
+    </a>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x BAROMATRIC PRESSURE SENSOR
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        BMP(VIN) = 3V3
+        <br>
+        BMP(GND) = GND
+        <br>
+        BMP(SDA) = PIN(A4)
+        <br>
+        BMP(SCL) = PIN(A5)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+#include &lt;Wire.h&gt;
+#include &lt;SFE_BMP180.h&gt;
+
+#define ALTITUDE 35.6
+SFE_BMP180 pressure;
+
+void setup() {
+  Serial.begin(9600);
+  if (pressure.begin()) {
+    Serial.println("BMP180 connected!");
+  } else {
+    Serial.println("BMP180 not connected!");
+  }
+}
+
+void loop() {
+  char status;
+  double T, P, p0;
+
+  Serial.print("You provided altitude: ");
+  Serial.print(ALTITUDE, 0);
+  Serial.println(" meters");
+
+  status = pressure.startTemperature();
+  if (status != 0) {
+    delay(status);
+
+    status = pressure.getTemperature(T);
+    if (status != 0) {
+      Serial.print("Temp: ");
+      Serial.print(T, 1);
+      Serial.println(" deg C");
+
+      status = pressure.startPressure(3);
+
+      if (status != 0) {
+        delay(status);
+
+        status = pressure.getPressure(P, T);
+        if (status != 0) {
+          Serial.print("Pressure measurement: ");
+          Serial.print(P);
+          Serial.println(" hPa (Pressure measured using temperature)");
+
+          p0 = pressure.sealevel(P, ALTITUDE);
+          Serial.print("Relative (sea-level) pressure: ");
+          Serial.print(p0);
+          Serial.println("hPa");
+          Serial.print("====================");
+          Serial.println("");
+        }
+      }
+    }
+  }
+  delay(1000);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

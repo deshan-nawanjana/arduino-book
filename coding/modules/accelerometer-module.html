@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Accelerometer මොඩියුලය, එම මොඩියුලයේ තිරස්ව හා සිරස්ව භ්‍රමණය වී ඇති ප්‍රමාණය ගණනය කළ හැකි අපූර්ව මොඩියුලයකි. ජංගම දුරකථනවල එන සමහර පරිගණක ක්‍රීඩා සඳහා (බොහෝ විට ධාවන ක්‍රීඩා) දුරකථනය දෙපසට හැරවීම සිදුකළ යුතුය.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="ACCELEROMETER MODULE භාවිතය">
+  <meta property="og:description" content="Accelerometer මොඩියුලය, එම මොඩියුලයේ තිරස්ව හා සිරස්ව භ්‍රමණය වී ඇති ප්‍රමාණය ගණනය කළ හැකි අපූර්ව මොඩියුලයකි. ජංගම දුරකථනවල එන සමහර පරිගණක ක්‍රීඩා සඳහා (බොහෝ විට ධාවන ක්‍රීඩා) දුරකථනය දෙපසට හැරවීම සිදුකළ යුතුය.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ACCELEROMETER MODULE භාවිතය">
+  <meta name="twitter:description" content="Accelerometer මොඩියුලය, එම මොඩියුලයේ තිරස්ව හා සිරස්ව භ්‍රමණය වී ඇති ප්‍රමාණය ගණනය කළ හැකි අපූර්ව මොඩියුලයකි. ජංගම දුරකථනවල එන සමහර පරිගණක ක්‍රීඩා සඳහා (බොහෝ විට ධාවන ක්‍රීඩා) දුරකථනය දෙපසට හැරවීම සිදුකළ යුතුය.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>ACCELEROMETER MODULE භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">ACCELEROMETER MODULE භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        ACCELEROMETER MODULE භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      Accelerometer මොඩියුලය, එම මොඩියුලයේ තිරස්ව හා සිරස්ව භ්‍රමණය වී ඇති ප්‍රමාණය ගණනය කළ හැකි අපූර්ව මොඩියුලයකි. ජංගම දුරකථනවල එන සමහර පරිගණක ක්‍රීඩා සඳහා (බොහෝ විට ධාවන ක්‍රීඩා) දුරකථනය දෙපසට හැරවීම සිදුකළ යුතුය. මෙම මොඩියුලයද එවැනි ක්‍රීඩා සඳහා ආදාන උපාංගයක් ලෙස භාවිත කළ හැකිය. එමෙන්ම කම්පනය වීම් පවා මෙම මොඩියුලයෙන් නිරීක්ෂණය කළ හැකිය. මෙහිදී මා භාවිතා කර ඇත්තේ ADXL345 යන මොඩියුලය බැවින් එයට අදාළව Library File එකක් යොදාගැන තිබේ. මෙ නිසා ප්‍රථමයෙන් එම ගොනුව ඔබේ Arduino IDE හි මෘදුකාංග ගොනුවලට ඇතුලත් කළ යුතුය.
+    </p>
+    <a href="../../assets/libraries/arduino/ADXL345.zip" target="_blank">
+      Download ADXL345 Library
+    </a>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x ACCELEROMETER MODULE
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        ACC(VCC) = ACC(CS) = 3V3
+        <br>
+        ACC(SDA) = PIN(A4)
+        <br>
+        ACC(SCL) = PIN(A5)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+#include &lt;Wire.h&gt;
+#include &lt;ADXL345.h&gt;
+
+ADXL345 adxl;
+int x, y, z;
+
+void setup() {
+  Serial.begin(9600);
+  adxl.powerOn();
+}
+
+void loop() {
+  adxl.readAccel( & x, & y, & z);
+  x = x / 10;
+  y = y / 10;
+  z = z / 10;
+  Serial.print(x);
+  Serial.print(" : ");
+  Serial.print(y);
+  Serial.print(" : ");
+  Serial.println(z);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>

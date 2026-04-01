@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="ශබ්දයට සංවේදී Microphone Sensor මගින් එම සංවේදකයට ශ්‍රවණය වන ශබ්ද තරංගයට අනුරූපව ප්‍රතිසම සංඥාවක් නිකුත් කිරීමේ හැකියාව ඇත. එම ප්‍රතිසම කියවීම Arduino හි Analog Pin එකක් ආධාරයෙන් සරළව කියවා ගත හැකිය.">
+  <!-- open graph tags -->
+  <meta property="og:title" content="MICROPHONE SENSOR භාවිතය">
+  <meta property="og:description" content="ශබ්දයට සංවේදී Microphone Sensor මගින් එම සංවේදකයට ශ්‍රවණය වන ශබ්ද තරංගයට අනුරූපව ප්‍රතිසම සංඥාවක් නිකුත් කිරීමේ හැකියාව ඇත. එම ප්‍රතිසම කියවීම Arduino හි Analog Pin එකක් ආධාරයෙන් සරළව කියවා ගත හැකිය.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deshan-nawanjana.github.io/">
+  <meta property="og:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- twitter card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MICROPHONE SENSOR භාවිතය">
+  <meta name="twitter:description" content="ශබ්දයට සංවේදී Microphone Sensor මගින් එම සංවේදකයට ශ්‍රවණය වන ශබ්ද තරංගයට අනුරූපව ප්‍රතිසම සංඥාවක් නිකුත් කිරීමේ හැකියාව ඇත. එම ප්‍රතිසම කියවීම Arduino හි Analog Pin එකක් ආධාරයෙන් සරළව කියවා ගත හැකිය.">
+  <meta name="twitter:image" content="https://deshan-nawanjana.github.io/arduino-book/assets/images/cover.png">
+  <!-- preload : fonts -->
+  <link rel="stylesheet" href="../../assets/fonts/fonts.css">
+  <link rel="preload" href="../../assets/fonts/FiraCode/FiraCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="../../assets/fonts/Inter/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- libraries -->
+  <script src="../../assets/libraries/prism.min.js"></script>
+  <link rel="stylesheet" href="../../assets/libraries/prism.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="../../index.css">
+  <!-- script -->
+  <script src="../../index.js" defer></script>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../assets/images/logo.png" type="image/png">
+  <!-- page title -->
+  <title>MICROPHONE SENSOR භාවිතය</title>
+</head>
+
+<body>
+  <article>
+    <header>
+      <nav aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Coding</a></li>
+          <li aria-current="page">MICROPHONE SENSOR භාවිතය</li>
+        </ol>
+      </nav>
+      <h1>
+        MICROPHONE SENSOR භාවිතය
+      </h1>
+      <address>
+        By <a class="author" rel="author" href="https://deshan.lk/" target="_blank">
+          Deshan Nawanjana
+        </a>
+      </address>
+    </header>
+    <p>
+      ශබ්දයට සංවේදී Microphone Sensor මගින් එම සංවේදකයට ශ්‍රවණය වන ශබ්ද තරංගයට අනුරූපව ප්‍රතිසම සංඥාවක් නිකුත් කිරීමේ හැකියාව ඇත. එම ප්‍රතිසම කියවීම Arduino හි Analog Pin එකක් ආධාරයෙන් සරළව කියවා ගත හැකිය. එම කියවන අගය ශ්‍රවණය වන උබ්දයට අනුරූපව 0 සහ 1023 අතර අගයක් වේ.
+    </p>
+    <dl>
+      <dt>
+        REQUIREMENTS
+      </dt>
+      <dd>
+        1 x ARDUINO BOARD
+        <br>
+        1 x MICROPHONE SENSOR
+      </dd>
+      <dt>
+        SETUP
+      </dt>
+      <dd>
+        MIC(VCC) = 5V
+        <br>
+        MIC(GND) = GND
+        <br>
+        MIC(OUT) = PIN(A0)
+      </dd>
+    </dl>
+    <pre lang="cpp">
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int x = analogRead(A0);
+  Serial.println(x);
+}
+</pre>
+    <footer>
+      <h3>
+        Developed by Deshan Nawanjana
+      </h3>
+      <ul>
+        <li>
+          <a href="https://deshan.lk" target="_blank">Deshan.lk</a>
+        </li>
+        <li>
+          <a href="https://github.com/deshan-nawanjana" target="_blank">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/mr.dnjs" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/deshan-nawanjana/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</body>
+
+</html>
